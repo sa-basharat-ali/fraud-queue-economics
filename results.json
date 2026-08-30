@@ -1,0 +1,181 @@
+{
+  "policies": [
+    {
+      "policy": "arrival order + score cutoffs",
+      "fraud_loss": 706674.844800001,
+      "false_decline_cost": 28394.973444,
+      "analyst_cost": 71525.74499999995,
+      "total_cost": 806595.563244001,
+      "analyst_hours": 1036.6050000000002,
+      "n_review": 7991,
+      "n_auto_approve": 15305,
+      "n_auto_decline": 704,
+      "auto_decline_rate": 0.029333333333333333,
+      "fraud_caught": 1218,
+      "fraud_missed": 1596,
+      "recall": 0.43283582089552236,
+      "value_recall": 0.41369365932296553
+    },
+    {
+      "policy": "score-ranked + score cutoffs",
+      "fraud_loss": 279125.5832000004,
+      "false_decline_cost": 25127.093212800057,
+      "analyst_cost": 71522.40999999986,
+      "total_cost": 375775.0864128003,
+      "analyst_hours": 1036.5566666666691,
+      "n_review": 7835,
+      "n_auto_approve": 15461,
+      "n_auto_decline": 704,
+      "auto_decline_rate": 0.029333333333333333,
+      "fraud_caught": 2394,
+      "fraud_missed": 420,
+      "recall": 0.8507462686567164,
+      "value_recall": 0.7684181056117095
+    },
+    {
+      "policy": "EV triage, raw score",
+      "fraud_loss": 67237.22039999985,
+      "false_decline_cost": 32733.420987200043,
+      "analyst_cost": 71775.75499999992,
+      "total_cost": 171746.3963871998,
+      "analyst_hours": 1040.2283333333335,
+      "n_review": 8957,
+      "n_auto_approve": 14339,
+      "n_auto_decline": 704,
+      "auto_decline_rate": 0.029333333333333333,
+      "fraud_caught": 2351,
+      "fraud_missed": 463,
+      "recall": 0.8354655294953802,
+      "value_recall": 0.9442153503268166
+    },
+    {
+      "policy": "EV triage, calibrated",
+      "fraud_loss": 84030.90839999984,
+      "false_decline_cost": 28905.676844800044,
+      "analyst_cost": 59180.95499999994,
+      "total_cost": 172117.5402447998,
+      "analyst_hours": 857.695000000001,
+      "n_review": 7268,
+      "n_auto_approve": 16030,
+      "n_auto_decline": 702,
+      "auto_decline_rate": 0.02925,
+      "fraud_caught": 2250,
+      "fraud_missed": 564,
+      "recall": 0.7995735607675906,
+      "value_recall": 0.9302821449351094
+    },
+    {
+      "policy": "ceiling: EV on true risk",
+      "fraud_loss": 83143.74059999979,
+      "false_decline_cost": 23658.453085600046,
+      "analyst_cost": 57381.77999999984,
+      "total_cost": 164183.9736855997,
+      "analyst_hours": 831.6200000000002,
+      "n_review": 6991,
+      "n_auto_approve": 16306,
+      "n_auto_decline": 703,
+      "auto_decline_rate": 0.029291666666666667,
+      "fraud_caught": 2276,
+      "fraud_missed": 538,
+      "recall": 0.8088130774697939,
+      "value_recall": 0.9310182007183473
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "SANCTIONS_NAME_FUZZY",
+      "alerts": 1650,
+      "precision": 0.01696969696969697,
+      "analyst_hours": 593.3949999999996,
+      "review_cost": 40944.25499999997,
+      "fraud_usd_surfaced": 12112.120000000003,
+      "roi": 0.29581976763284645
+    },
+    {
+      "rule_id": "VELOCITY_CARD_24H",
+      "alerts": 5278,
+      "precision": 0.038651004168245545,
+      "analyst_hours": 528.1866666666687,
+      "review_cost": 36444.88000000013,
+      "fraud_usd_surfaced": 81667.96999999997,
+      "roi": 2.2408626396903952
+    },
+    {
+      "rule_id": "BIN_COUNTRY_HIGH_RISK",
+      "alerts": 1398,
+      "precision": 0.055793991416309016,
+      "analyst_hours": 117.9550000000001,
+      "review_cost": 8138.895000000006,
+      "fraud_usd_surfaced": 26301.96000000002,
+      "roi": 3.231637710033119
+    },
+    {
+      "rule_id": "GEO_IP_BILLING_MISMATCH",
+      "alerts": 3869,
+      "precision": 0.049108296717498064,
+      "analyst_hours": 353.85166666666726,
+      "review_cost": 24415.76500000004,
+      "fraud_usd_surfaced": 85326.07999999996,
+      "roi": 3.494712535118184
+    },
+    {
+      "rule_id": "AMOUNT_ZSCORE_GT_3",
+      "alerts": 1923,
+      "precision": 0.11700468018720749,
+      "analyst_hours": 254.60999999999987,
+      "review_cost": 17568.08999999999,
+      "fraud_usd_surfaced": 102154.55999999997,
+      "roi": 5.81477895434279
+    },
+    {
+      "rule_id": "EMAIL_AGE_LT_7D",
+      "alerts": 2694,
+      "precision": 0.07757980697847068,
+      "analyst_hours": 200.7816666666664,
+      "review_cost": 13853.934999999981,
+      "fraud_usd_surfaced": 88606.45000000003,
+      "roi": 6.395760482491086
+    },
+    {
+      "rule_id": "DEVICE_REUSE_MULTI_ACCT",
+      "alerts": 3436,
+      "precision": 0.17462165308498254,
+      "analyst_hours": 514.2333333333322,
+      "review_cost": 35482.09999999992,
+      "fraud_usd_surfaced": 285510.4200000001,
+      "roi": 8.046604344162288
+    },
+    {
+      "rule_id": "BEHAVIOR_PASTE_PAN",
+      "alerts": 2118,
+      "precision": 0.2544853635505194,
+      "analyst_hours": 263.9650000000003,
+      "review_cost": 18213.58500000002,
+      "fraud_usd_surfaced": 228738.50999999986,
+      "roi": 12.558675845529566
+    },
+    {
+      "rule_id": "SESSION_EMULATOR_SIG",
+      "alerts": 898,
+      "precision": 0.40200445434298443,
+      "analyst_hours": 167.13000000000002,
+      "review_cost": 11531.970000000001,
+      "fraud_usd_surfaced": 154609.9,
+      "roi": 13.407067482832506
+    },
+    {
+      "rule_id": "CHARGEBACK_LINKED_ENT",
+      "alerts": 736,
+      "precision": 0.5163043478260869,
+      "analyst_hours": 147.46499999999997,
+      "review_cost": 10175.084999999997,
+      "fraud_usd_surfaced": 140271.71000000005,
+      "roi": 13.785802280767196
+    }
+  ],
+  "days": 30,
+  "annualised_saving": 2477833.4783773394,
+  "auc": 0.8660798866720195,
+  "mae_raw": 0.07322659125,
+  "mae_calibrated": 0.03675804159438089
+}
