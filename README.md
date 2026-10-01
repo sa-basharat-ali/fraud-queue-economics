@@ -99,7 +99,7 @@ the top of `triage.py` for real numbers and every output rescales.
 
 ## Where this comes from
 
-I ran fraud detection and merchant risk models at Geidea, Saudi Arabia's largest fintech:
+I ran fraud detection and merchant risk models at Geidea, Saudi Arabia's largest payments processor:
 40,000+ merchants, 400,000+ POS terminals, over a million transactions a day, real-time
 anomaly detection in production. The lesson that stuck was not about model architecture.
 It was that the review queue is where model quality turns into money or fails to, and
